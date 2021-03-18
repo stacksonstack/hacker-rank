@@ -38,7 +38,7 @@ function solveMeFirst(a, b) {
 
 function staircase(n) {
     let filledArray = new Array(n).fill(' '); //makes an array with n empty strings
-    console.log(filledArray)
+    // console.log(filledArray)
     while (filledArray.indexOf(' ') !== -1) {
         filledArray.shift();
         filledArray.push('#');
@@ -48,4 +48,24 @@ function staircase(n) {
     return
 }
 
-console.log(staircase(10))
+// console.log(staircase(10))
+
+
+
+// Given an array of integers, find the sum of its elements.
+
+// For example, if the array ar=[1,2,3], 1 + 2 + 3 = 6 so return 6 .
+
+// Function Description
+
+// Complete the simpleArraySum function in the editor below. It must return the sum of the array elements as an integer.
+
+// simpleArraySum has the following parameter(s):
+
+// ar: an array of integers
+
+function simpleArraySum(ar) {
+    return ar.reduce((acc, currentValue) => acc + currentValue)
+}
+
+console.log(simpleArraySum([1,2,3,4,10,11]))
