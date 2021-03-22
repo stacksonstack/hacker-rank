@@ -40,4 +40,7 @@ function birthdayCakeCandles(candles) {
 
 }
 
-console.log(birthdayCakeCandles([4,4,1,3])) //return 2 bc there are two 4 inch candles
+// console.log(birthdayCakeCandles([4,4,1,3])) //return 2 bc there are two 4 inch candles
+
+
+
