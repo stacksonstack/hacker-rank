@@ -58,4 +58,17 @@ function gradingStudents(grades) {
     })
 }
 
-console.log(gradingStudents([73, 67, 38, 33])) //75, 67, 40 , 33
+// console.log(gradingStudents([73, 67, 38, 33])) //75, 67, 40 , 33
+
+
+
+// return YES if k can be found in the arr array otherwise return NO
+
+function findNumber(arr, k) {
+    let filtered = arr.filter((num)=> num === k)
+    if(filtered.length > 0){
+        return "YES"
+    }else{return "NO"}
+}
+
+// console.log(findNumber([1,4,7,44,6,77,4,55,5], 79)) //NO
