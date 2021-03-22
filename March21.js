@@ -62,6 +62,9 @@ function gradingStudents(grades) {
 
 
 
+
+
+
 // return YES if k can be found in the arr array otherwise return NO
 
 function findNumber(arr, k) {
@@ -72,3 +75,23 @@ function findNumber(arr, k) {
 }
 
 // console.log(findNumber([1,4,7,44,6,77,4,55,5], 79)) //NO
+
+
+
+
+//Return the all the odd numbers between and including l ana r
+
+function oddNumbers(l, r) {
+    let odd = []
+    for(let i = l; i <= r; i++){
+        if(i%2 != 0){
+            odd.push(i) 
+        }
+    }
+    return odd
+}
+
+
+// console.log(oddNumbers(2,5)) // 3,5
+
+
