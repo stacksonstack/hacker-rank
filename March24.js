@@ -34,9 +34,7 @@ function bonAppetit(bill, k, b) {
     let amountDue = (totalBill - uneatenFood) / 2
     return amountDue === b ? console.log("Bon Appetit") : console.log(b - amountDue)
 }
-
-
-console.log(bonAppetit([2,4,6], 2, 6))
+// console.log(bonAppetit([2,4,6], 2, 6))
 
 
 
@@ -53,6 +51,15 @@ console.log(bonAppetit([2,4,6], 2, 6))
 // int: the number of pairs
 
 function sockMerchant(n, ar) {
-
-
+    let sockObj = {}
+    ar.map((sock)=> {
+        sockObj[sock] ? sockObj[sock].socks +=1 : sockObj[sock] = {socks : 1}
+    })
+    let uniqueArray = [...new Set(ar)]
+    let nonPairs = 0
+    uniqueArray.forEach((id)=> nonPairs = nonPairs + (sockObj[id].socks % 2)) 
+    let pairs = (n - nonPairs) /2 
+    return pairs
 }
+
+console.log(sockMerchant(7, [1,2,1,2,1,3,2]))
