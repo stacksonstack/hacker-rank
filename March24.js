@@ -18,3 +18,41 @@ function migratoryBirds(arr) {
 }
 
 // console.log(migratoryBirds([1,1,2,2,3]))
+
+
+// Complete the bonAppetit function in the editor below. It should print Bon Appetit if the bill is fairly split. Otherwise, it should print the integer amount of money that Brian owes Anna.
+
+// bonAppetit has the following parameter(s):
+
+// bill: an array of integers representing the cost of each item ordered
+// k: an integer representing the zero-based index of the item Anna doesn't eat
+// b: the amount of money that Anna contributed to the bill
+
+function bonAppetit(bill, k, b) {
+    let totalBill = bill.reduce((acc, curr) => acc + curr)
+    let uneatenFood = bill[k]
+    let amountDue = (totalBill - uneatenFood) / 2
+    return amountDue === b ? console.log("Bon Appetit") : console.log(b - amountDue)
+}
+
+
+console.log(bonAppetit([2,4,6], 2, 6))
+
+
+
+// Function Description
+
+// Complete the sockMerchant function in the editor below.
+
+// sockMerchant has the following parameter(s):
+
+// int n: the number of socks in the pile
+// int ar[n]: the colors of each sock
+// Returns
+
+// int: the number of pairs
+
+function sockMerchant(n, ar) {
+
+
+}
