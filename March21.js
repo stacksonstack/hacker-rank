@@ -95,3 +95,43 @@ function oddNumbers(l, r) {
 // console.log(oddNumbers(2,5)) // 3,5
 
 
+// function max(text){
+//     let textArray = [...text]
+//     let textObj = {}
+//     textArray.map((letter, index) => {
+//         textObj[letter] ? textObj[letter].instance +=1  : textObj[letter] = {instance: 1, index: index}
+//     })
+//     let uniqueArray = [...new Set(textArray)]
+//     let highestInstance = 0
+//     uniqueArray.forEach((letter) => highestInstance = Math.max(highestInstance , textObj[letter].instance)) 
+//     let filteredText = uniqueArray.filter((letter) => highestInstance === textObj[letter].instance)
+//     return filteredText[0]
+// }
+
+
+// console.log(max("abcdefgab"))
+
+
+// function Inversion(arr){
+// let arrayLength = arr.length
+//    var counter = 0;
+//     for(var i=1; i < arrayLength - 1; i++){
+//         console.log("loop")
+//         var small = 0;
+//         var great = 0;
+//         for(var j=i+1; j < arrayLength; j++ ){
+//             if(arr[i]> arr[j]){
+//                 small+=1
+//             }
+//         }
+//         for(var m=i-1; m >= 0; m--){
+//             if(arr[i] < arr[m]){
+//                 great+=1
+//             }
+//         }
+//         counter += great * small
+//     }
+//     return counter
+// }
+
+// console.log(Inversion([5,3,4,2,1]))
