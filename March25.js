@@ -50,4 +50,25 @@ function catAndMouse(x, y, z) {
     return catA > catB ? "Cat B" : "Cat A"
 }
 
-console.log(catAndMouse(2,5,4))
+// console.log(catAndMouse(2,5,4))
+
+
+// Function Description
+
+// Complete the hurdleRace function in the editor below.
+
+// hurdleRace has the following parameter(s):
+
+// int k: the height the character can jump naturally
+// int height[n]: the heights of each hurdle
+// Returns
+
+// int: the minimum number of doses required, always 0 or more
+
+
+function hurdleRace(k, height) {
+    let maxHeight = Math.max(...height)
+    return maxHeight <= k ? 0 : maxHeight - k
+}
+
+console.log(hurdleRace(1, [1,2,3,3,2])) //2
