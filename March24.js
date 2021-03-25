@@ -85,8 +85,12 @@ function pageCount(n, p) {
     return fromStart <= fromEnd ? fromStart : fromEnd
 }
 
+
+
 // console.log(pageCount(5,3))
 
 // console.log(pageCount(6,2))
 
 // console.log(pageCount(5,4))
+
+
