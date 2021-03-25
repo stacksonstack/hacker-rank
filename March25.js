@@ -34,9 +34,20 @@ function getMoneySpent(keyboards, drives, b) {
 
 // catAndMouse has the following parameter(s):
 
-// int x: Cat 's position
-// int y: Cat 's position
-// int z: Mouse 's position
+// int x: Cat 's position   7  2
+// int y: Cat 's positionc  9   3
+// int z: Mouse 's position 5    1
 // Returns
 
 // string: Either 'Cat A', 'Cat B', or 'Mouse C'
+
+function catAndMouse(x, y, z) {
+    const catA = Math.abs(x - z)
+    const catB = Math.abs(y - z)
+
+    if(catA === catB) 
+        return 'Mouse C';
+    return catA > catB ? "Cat B" : "Cat A"
+}
+
+console.log(catAndMouse(2,5,4))
