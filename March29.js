@@ -83,9 +83,38 @@ function timeInWords(h, m) {
     }
 }
 
-console.log(timeInWords(5,0)) //five o' clock
-console.log(timeInWords(5,1)) //one minute past five
-console.log(timeInWords(5,15)) // quarter past five
-console.log(timeInWords(5,30)) // half past five
-console.log(timeInWords(5,40)) // twenty minutes to six
-console.log(timeInWords(5,45)) // quarter to six
+// console.log(timeInWords(5,0)) //five o' clock
+// console.log(timeInWords(5,1)) //one minute past five
+// console.log(timeInWords(5,15)) // quarter past five
+// console.log(timeInWords(5,30)) // half past five
+// console.log(timeInWords(5,40)) // twenty minutes to six
+// console.log(timeInWords(5,45)) // quarter to six
+
+
+// Function Description
+
+// Complete the designerPdfViewer function in the editor below.
+
+// designerPdfViewer has the following parameter(s):
+
+// int h[26]: the heights of each letter
+// string word: a string
+// Returns
+
+// int: the size of the highlighted area
+
+function designerPdfViewer(h, word) {
+    let _word = word.toLowerCase()
+    let wordArray = [..._word]
+    let letterIndex = { a: 0, b:1, c:2, d:3, e:4,f:5,g:6,h:7,i:8,j:9,k:10,l:11,m:12
+        ,n:13,o:14,p:15,q:15,r:17,s:18,t:19,u:20,v:21,w:22,x:23,y:24,z:25}
+    let heights = []
+    wordArray.forEach((letter)=> {
+        let index = letterIndex[letter]
+        heights.push(h[index])
+    })
+    return heights.length * heights.sort()[heights.length -1]
+}
+
+// console.log(designerPdfViewer([1,3,1,3,1,4,1,3,2,5,5,5,5,1,1,5,5,1,5,2,5,5,5,5,5,5], "torn")) // 8
+
