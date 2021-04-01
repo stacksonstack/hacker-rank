@@ -63,5 +63,30 @@ function viralAdvertising(n) {
   return totalLikes
 }
 
-console.log(viralAdvertising(5))
+// console.log(viralAdvertising(5)) // 24
+
+// Function Description
+
+// Complete the beautifulDays function in the editor below.
+
+// beautifulDays has the following parameter(s):
+
+// int i: the starting day number
+// int j: the ending day number
+// int k: the divisor
+// Returns
+
+// int: the number of beautiful days in the range
+
+function beautifulDays(i, j, k) {
+    let days = 0
+    while(i<=j){
+        let reversed = i.toString().split('').reverse().join('')
+        if((i-reversed)%k === 0) days++
+        i++
+    }
+    return days
+}
+
+console.log(beautifulDays(20,23,6))
 
