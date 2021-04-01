@@ -108,7 +108,7 @@ function angryProfessor(k, a) {
     a.forEach((arrivalTime)=> {
         if(arrivalTime <=0) onTime++
     })
-    return onTime >= k ? "YES" : "NO"
+    return onTime >= k ? "NO" : "YES"
 }
 
 console.log(angryProfessor(3,[-2,-1,0,1,2])) // NO
