@@ -37,4 +37,31 @@ function divisibleSumPairsRefactored(n, k, ar) {
   return count 
 }
 
-console.log(divisibleSumPairsRefactored(6, 5, [1, 2, 3, 4, 5, 6])); //3
+// console.log(divisibleSumPairsRefactored(6, 5, [1, 2, 3, 4, 5, 6])); //3
+
+
+// Function Description
+
+// Complete the viralAdvertising function in the editor below.
+
+// viralAdvertising has the following parameter(s):
+
+// int n: the day number to report
+// Returns
+
+// int: the cumulative likes at that day
+
+function viralAdvertising(n) {
+    let totalLikes = 0
+    let shared = 5
+    let liked = 0 
+    for(var i =0; i < n ; i++){
+        liked = Math.floor(shared/2)
+        totalLikes += liked
+        shared = liked * 3
+    }
+  return totalLikes
+}
+
+console.log(viralAdvertising(5))
+
