@@ -88,5 +88,29 @@ function beautifulDays(i, j, k) {
     return days
 }
 
-console.log(beautifulDays(20,23,6))
+// console.log(beautifulDays(20,23,6)) // 2
+
+
+// Function Description
+
+// Complete the angryProfessor function in the editor below. It must return YES if class is cancelled, or NO otherwise.
+
+// angryProfessor has the following parameter(s):
+
+// int k: the threshold number of students
+// int a[n]: the arrival times of the  students
+// Returns
+
+// string: either YES or NO
+
+function angryProfessor(k, a) {
+    let onTime = 0
+    a.forEach((arrivalTime)=> {
+        if(arrivalTime <=0) onTime++
+    })
+    return onTime >= k ? "YES" : "NO"
+}
+
+console.log(angryProfessor(3,[-2,-1,0,1,2])) // NO
+
 
