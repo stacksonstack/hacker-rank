@@ -72,6 +72,7 @@ function _diagonalDifference(arr) {
        if(index === indexLength) acc= Math.abs(acc[0] - acc[1])
         return acc
     }, [0,0])
+    
     // return Math.abs(diagonal.reduce((acc, curr) => acc - curr))
 }
 
