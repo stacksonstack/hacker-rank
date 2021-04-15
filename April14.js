@@ -65,13 +65,14 @@ function diagonalDifference(arr) {
 
 function _diagonalDifference(arr) {
     var indexLength = arr.length - 1
-    var diagonal = arr.reduce((acc, curr, index) => {
+    return diagonal = arr.reduce((acc, curr, index) => {
         console.log(curr)
         acc[0] += curr[index]
         acc[1] += curr[indexLength-index]
+       if(index === indexLength) acc= Math.abs(acc[0] - acc[1])
         return acc
     }, [0,0])
-    return Math.abs(diagonal.reduce((acc, curr) => acc - curr))
+    // return Math.abs(diagonal.reduce((acc, curr) => acc - curr))
 }
 
 console.log(_diagonalDifference([ [ 11, 2, 4 ], [ 4, 5, 6 ], [ 10, 8, -12 ] ]))
