@@ -1,4 +1,4 @@
-// Given a number n, for each interger i in the range from 1 to n, print one value per line as follows:
+// Given a number n, for each integer i in the range from 1 to n, print one value per line as follows:
 // - if i is a multiple of both 3 and 5, print FizzBuzz.
 // - if i is a multiple of only 3, print Fizz.
 // - if i is a multiple of only 5, print Buzz.
@@ -26,10 +26,6 @@ function plusMinus(arr) {
         else acc['0'] += 1
         return acc
     },{'1': 0, '-1': 0, '0': 0})
-    // arr= [-4, 3, -9, 0, 4, 1]
-    // 0.500000
-    // 0.333333
-    // 0.166667
     return `${(d['1']/arr.length).toFixed(6)}\n${(d['-1']/arr.length).toFixed(6)}\n${(d['0']/arr.length).toFixed(6)}`  
     
 }
@@ -72,8 +68,33 @@ function _diagonalDifference(arr) {
        if(index === indexLength) acc= Math.abs(acc[0] - acc[1])
         return acc
     }, [0,0])
-    
+
     // return Math.abs(diagonal.reduce((acc, curr) => acc - curr))
 }
 
-console.log(_diagonalDifference([ [ 11, 2, 4 ], [ 4, 5, 6 ], [ 10, 8, -12 ] ]))
+// console.log(_diagonalDifference([ [ 11, 2, 4 ], [ 4, 5, 6 ], [ 10, 8, -12 ] ]))
+
+
+
+function maxPath(board, p , q){
+    let topRow = board[0][p];
+    let bottomRow= board[board.length-1][q]
+    let maxScore = 0
+    let maxNum=0;
+    let maxNum2=0
+    
+    for(let i = 0; i < board.length; i++){
+        if(board[1][i] > maxNum) maxNum = board[1][i]
+        if(board[2][i] > maxNum2) maxNum2 = board[2][i]
+        
+        
+    }
+    console.log("second",board[1][q-1])
+    console.log(bottomRow)
+    
+    return topRow + maxNum + maxNum2
+}
+
+console.log(maxPath([[1,2,3],[4,5,6],[7,8,9]], 1 , 0))
+
+console.log(maxPath([[9,4,7],[2,1,3],[1,4,2]], 2, 1))
