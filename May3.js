@@ -55,5 +55,50 @@ function _beautifulDays(i, j, k) {
    return beautifulDays
 }
 
-console.log(_beautifulDays(20,23,6))
+// console.log(_beautifulDays(20,23,6))
+
+
+// Maria plays college basketball and wants to go pro. Each season she maintains a record of her play. She tabulates the number of times she breaks her season record for most points and least points in a game. Points scored in the first game establish her record for the season, and she begins counting from there.
+// cores are in the same order as the games played.
+// Given the scores for a season, determine the number of times Maria breaks her records for most and least points scored during the season.
+
+
+function breakingRecords(scores) {
+    var max = scores[0]
+    var min = scores[0]
+    var count = [0,0]
+    scores.forEach((score) =>{
+        if(score > max){
+            max = score
+            count[0] +=1
+        }
+        else if(score < min){
+            min  = score
+            count[1]+=1
+        }
+    })
+    return count
+}
+
+
+// console.log(breakingRecords([12,24,10,24]))
+
+
+
+// An integer  is a divisor of an integer  if the remainder of .
+
+// Given an integer, for each digit that makes up the integer determine whether it is a divisor. Count the number of divisors occurring within the integer.
+
+function findDigits(n) {
+    var numArray = n.toString().split("")
+    var divisor = 0
+    numArray.forEach((num)=>{
+        if(n % num === 0) divisor +=1
+    })
+    return divisor
+}
+
+// console.log(findDigits(124)) //3
+// console.log(findDigits(111)) //3
+// console.log(findDigits(10)) //1
 
