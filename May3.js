@@ -43,4 +43,17 @@ function beautifulDays(i, j, k) {
 return beautifulDays
 }
 
-console.log(beautifulDays(20,23,6))
+// console.log(beautifulDays(20,23,6))
+
+function _beautifulDays(i, j, k) {
+   var beautifulDays = 0;
+   while(i <=j){
+       let reversed = i.toString().split("").reverse().join("")
+       if((i - reversed) % k === 0) beautifulDays += 1
+       i++
+   }
+   return beautifulDays
+}
+
+console.log(_beautifulDays(20,23,6))
+
