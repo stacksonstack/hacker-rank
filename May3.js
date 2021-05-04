@@ -13,5 +13,11 @@ function saveThePrisoner(n, m, s) {
         return s
 }
 
-console.log(saveThePrisoner(4,6,2))
+// console.log(saveThePrisoner(4,6,2))
+
+function _saveThePrisoner(n, m, s) {
+        return (m-1 + s)%n || n;
+}
+    
+// console.log(_saveThePrisoner(4,6,2))
 
